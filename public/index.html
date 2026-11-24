@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration Manager</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Event Registration Manager</a>
+    </div>
+</nav>
+
+<div class="container mt-4">
+
+    <h2 class="text-center mb-4">Register Attendee</h2>
+
+    <form id="attendeeForm" class="card card-body shadow-sm mb-4">
+
+        <div class="mb-3">
+            <label class="form-label">Attendee Name</label>
+            <input type="text" id="name" class="form-control" placeholder="Enter name">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Event</label>
+            <select id="event" class="form-select">
+                <option value="">Select Event</option>
+                <option value="Tech Conference">Tech Conference</option>
+                <option value="Music Festival">Music Festival</option>
+                <option value="Business Seminar">Business Seminar</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Ticket Type</label>
+            <select id="ticketType" class="form-select">
+                <option value="">Select Ticket</option>
+                <option value="Regular">Regular</option>
+                <option value="VIP">VIP</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Ticket Price (PKR)</label>
+            <input type="number" id="ticketPrice" class="form-control" placeholder="Enter price" min="1">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Register Attendee</button>
+    </form>
+
+    <div class="alert alert-success">
+        Total Ticket Revenue: PKR <strong id="revenue">0</strong>
+    </div>
+
+    <h3 class="mb-3">Registered Attendees</h3>
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Event</th>
+                    <th>Ticket</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="attendeeList"></tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

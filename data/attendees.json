@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1795524382343,
+    "name": "wick",
+    "event": "Tech Conference",
+    "ticketType": "Regular",
+    "ticketPrice": 200
+  },
+  {
+    "id": 1795524892688,
+    "name": "Sara Ahmed",
+    "event": "Music Festival",
+    "ticketType": "Regular",
+    "ticketPrice": 1500
+  }
+]
